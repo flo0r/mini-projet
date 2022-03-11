@@ -10,4 +10,9 @@ class Fille extends Parente {
     constructor(c) {
         super(c, null)
     }
+
+    toto() {
+        
+    }
 }
+
