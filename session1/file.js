@@ -9,8 +9,8 @@ class Fichier {
 
         return this.contenu
     }
-    ecrire(contenu) {
-        fs.writeFileSync(this.fichier, '\n' + contenu, {encoding:'utf8', flag: 'a+'})
+    ecrire(contenu, mode = 'a+') {
+        fs.writeFileSync(this.fichier, '\n' + contenu, {encoding:'utf8', flag: mode})
     }
     supprimer() {
         fs.rmSync(this.fichier)

@@ -13,4 +13,5 @@ monFichier.vider()*/
 // Partie 2 : Lecture simple d'un fichier Json
 
 let monFichierJson = new FichierJson('myJsonFile.json')
-monFichierJson.LireJson()
+monFichierJson.lireJson()
+monFichierJson.ecrireJson('typeA', 'elec2')
