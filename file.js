@@ -6,6 +6,8 @@ class Fichier {
     }
     lire() {
         this.contenu = fs.readFileSync(this.fichier, {encoding:'utf8', flag:'r'})
+
+        return this.contenu
     }
     ecrire(contenu) {
         fs.writeFileSync(this.fichier, '\n' + contenu, {encoding:'utf8', flag: 'a+'})
@@ -22,10 +24,4 @@ class Fichier {
     }
 }
 
-let monFichier = new Fichier('myFile.txt')
-
-monFichier.lire()
-monFichier.affichage()
-monFichier.ecrire('blabla')
-monFichier.vider()
-//monFichier.supprimer()
+module.exports = Fichier
